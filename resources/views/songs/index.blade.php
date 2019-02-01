@@ -29,7 +29,7 @@
       <div class="row">
           <div class="col-lg-12">
               <h2>Songs Lyrics</h2>
-              <div class="table-responsive">
+              <div class="table-responsive-sm">
                   <table class="table table-hover table-striped">
                       <thead>
                           <tr>

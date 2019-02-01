@@ -7,6 +7,17 @@ use App\Song;
 
 class SongsController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -84,7 +95,7 @@ class SongsController extends Controller
           'body' => 'required',
         ]);
         Song::find($id)->update($request->all());
-        return redirect()->route('songs.index')->with('success','Song update success');
+        return redirect()->route('songs.index')->with('success','Song was successfully updated!');
     }
 
     /**
@@ -96,6 +107,6 @@ class SongsController extends Controller
     public function destroy($id)
     {
         Song::find($id)->delete();
-        return redirect()->route('songs.index')->with('success','Song deleted success');
+        return redirect()->route('songs.index')->with('success','Song lyrics was successfully deleted!');
     }
 }

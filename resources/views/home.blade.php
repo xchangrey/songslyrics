@@ -13,8 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Go to your list of song lyrics <a href="{{ url('/songs')}}">here</a>
+                    Welcome {{ Auth::user()->name }}.
+                    Go to your list of song lyrics <a href="{{ url('/songs')}}">here</a>.
                 </div>
             </div>
         </div>
